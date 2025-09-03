@@ -20,20 +20,12 @@ class Solution:
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        LCA = [root]
-        def search (root):
-            if not root:
-                return 
-            LCA[0] = root
-            if root.val == p.val or root.val == q.val:
-                return 
-            elif root.val < p.val and root.val < q.val:
-                search(root.right)
-            elif root.val > p.val and root.val > q.val:
-                search(root.left)
+        current = root
+        while not min(p.val,q.val) <= current.val <= max(p.val,q.val):
+            if current.val > max(p.val,q.val):
+                current = current.left
             else:
-                return
-        search(root)
-        return LCA[0]
+                current = current.right
+        return current
             
         
