@@ -7,6 +7,7 @@
 from collections import deque
 class Solution:
     def zigzagLevelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        #bfs approach
         if not root:
             return []
         ans = []
