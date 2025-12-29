@@ -4,7 +4,7 @@ class Solution:
         for word in allowed:
             allow[word[:2]].append(word[2])
         start = list(bottom)
-        print(allow)
+
         def build(i, level, next_row):
             if i == len(level) - 1:
                 return dfs(next_row)
