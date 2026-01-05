@@ -1,2 +1,2 @@
 # Algole
-Daily Leetcode Solution for Beginners
+Daily Leetcode Solution for everyone
